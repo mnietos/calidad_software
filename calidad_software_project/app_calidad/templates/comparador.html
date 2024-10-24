@@ -1,0 +1,177 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/comp-style.css' %}" />
+    <title>Comparador huella de CO2</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="logo">
+          <a href="{% url 'index' %}"
+            ><img src="{% static 'src/ong.png' %}" alt="Logo"
+          /></a>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="{% url 'productos' %}">Productos</a></li>
+            <li><a href="{% url 'calc' %}">Calculadora</a></li>
+            <li><a href="{% url 'comparador' %}">Comparador</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'perfil' %}">Perfil</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="contenido-comparador">
+      <h2>Comparador de Huella de Carbono</h2>
+      <div class="comparador-columnas">
+        <div class="columna-producto">
+          <h3>Producto Tecnológico 1</h3>
+          <form id="carbon-comparator-form-producto1">
+            {% csrf_token %}
+            <label for="material1">Material del Producto:</label>
+            <input
+              type="text"
+              id="material1"
+              name="material1"
+              placeholder="Ej. Acero, Plástico"
+            />
+
+            <label for="energia1">Energía Utilizada (kWh):</label>
+            <input
+              type="number"
+              id="energia1"
+              name="energia1"
+              placeholder="Ej. 100"
+            />
+
+            <label for="pais1">País de Producción:</label>
+            <select id="pais1" name="pais1">
+              <option value="" disabled="" selected="">
+                Selecciona un país
+              </option>
+              <option value="usa">Estados Unidos</option>
+              <option value="china">China</option>
+              <option value="alemania">Alemania</option>
+              <option value="otros">Otros</option>
+            </select>
+          </form>
+        </div>
+
+        <div class="columna-producto">
+          <h3>Producto Tecnológico 2</h3>
+          <form id="carbon-comparator-form-producto2">
+            {% csrf_token %}
+            <label for="material2">Material del Producto:</label>
+            <input
+              type="text"
+              id="material2"
+              name="material2"
+              placeholder="Ej. Acero, Plástico"
+            />
+
+            <label for="energia2">Energía Utilizada (kWh):</label>
+            <input
+              type="number"
+              id="energia2"
+              name="energia2"
+              placeholder="Ej. 100"
+            />
+
+            <label for="pais2">País de Producción:</label>
+            <select id="pais2" name="pais2">
+              <option value="" disabled="" selected="">
+                Selecciona un país
+              </option>
+              <option value="usa">Estados Unidos</option>
+              <option value="china">China</option>
+              <option value="alemania">Alemania</option>
+              <option value="otros">Otros</option>
+            </select>
+          </form>
+        </div>
+      </div>
+
+      <button type="submit">Comparar Huella de Carbono</button>
+
+      <div class="resultados">
+        <h3>Resultados de la Comparación</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Huella de Carbono (kg CO2e)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Producto 1</td>
+              <td>---</td>
+            </tr>
+            <tr>
+              <td>Producto 2</td>
+              <td>---</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="premium-features">
+        <h3>Funciones Premium</h3>
+        <button class="premium-button guardar">Guardar Comparación</button>
+        <button class="premium-button historial">Ver Historial</button>
+        <p class="premium-info">
+          Estas funciones solo están disponibles para
+          <a href="{% url 'info' %}">usuarios premium.</a>
+        </p>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-sections">
+          <div class="footer-column">
+            <h3>Historial</h3>
+            <ul>
+              <li><a href="#">Historial de busquedas</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Sobre Nosotros</h3>
+            <ul>
+              <li><a href="#quienes-somos">¿Quiénes Somos?</a></li>
+              <li><a href="#valores">Valores</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contacto</h3>
+            <ul>
+              <li>
+                <a href="mailto:migu.nieto@duocuc.cl">Correo Electrónico</a>
+              </li>
+              <li><a href="tel:+56983044190">Teléfono</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Política</h3>
+            <ul>
+              <li><a href="#privacidad">Política de Privacidad</a></li>
+              <li><a href="#terminos">Términos y Condiciones</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Suscripción</h3>
+            <form>
+              {% csrf_token %}
+              <label for="email">Suscríbete a nuestro boletín:</label>
+              <input type="email" id="email" placeholder="Ingresa tu email" />
+              <button type="submit">Suscribirse</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

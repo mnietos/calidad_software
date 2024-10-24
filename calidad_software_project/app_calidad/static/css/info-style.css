@@ -1,0 +1,200 @@
+
+.contenido-suscripciones {
+    height: 70vh;
+    margin-top: 4%;
+    text-align: center;
+}
+
+.suscripcion-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 2%;
+    width: 30%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(242, 163, 101, 0.2), rgba(242, 163, 101, 0.1));
+    z-index: 0;
+}
+
+.card h3 {
+    color: #f2a365;
+    margin-bottom: 1%;
+    z-index: 1; 
+}
+
+.precio {
+    font-size: 2.5vw;
+    color: #333;
+    margin-bottom: 5%;
+    z-index: 1; 
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    text-align: left;
+    z-index: 1; 
+}
+
+.card ul li {
+    margin: 5px 0;
+}
+
+.btn-pagar {
+    margin: 1% 20px 0 0;
+    padding: 4%;
+    background-color: #f2a365;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+}
+
+.btn-pagar:hover {
+    background-color: #f08c3a;
+}
+
+/* FOOTER Y HEADRE */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.site-header {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header .logo img {
+    width: 100px;
+    height: auto;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    margin: 0 15px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-menu ul li a:hover {
+    color: #f2a365;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #222;
+    color: #ddd;
+    padding: 20px 0;
+}
+
+.site-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-sections {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.footer-column {
+    margin: 15px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f2a365;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 5px 0;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+}
+
+.footer-column form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column form input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.footer-column form button {
+    padding: 8px 12px;
+    background-color: #f2a365;
+    border: none;
+    border-radius: 4px;
+    color: #222;
+    cursor: pointer;
+}
+
+.footer-column form button:hover {
+    background-color: #f08c3a;
+}

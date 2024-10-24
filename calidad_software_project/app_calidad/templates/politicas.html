@@ -1,0 +1,134 @@
+{% load static %}
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/politicas.css' %}" />
+    <title>Política de Privacidad - Life & Sustainability Today</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="logo">
+          <a href="{% url 'index' %}"><img src="{% static 'src/ong.png' %}" alt="Logo" /></a>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="{% url 'productos' %}">Productos</a></li>
+            <li><a href="{% url 'calc' %}">Calculadora</a></li>
+            <li><a href="{% url 'comparador' %}">Comparador</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'perfil' %}">Perfil</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <section id="politica-privacidad">
+        <div class="container">
+          <h1>Política de Privacidad</h1>
+          <p>
+            En ONG Life & Sustainability Today, nos tomamos muy en serio la privacidad de nuestros usuarios. Esta Política de Privacidad tiene como objetivo informar sobre cómo recopilamos, usamos, y protegemos la información personal que recibimos a través de nuestro sitio web. Al acceder y utilizar nuestro sitio, usted acepta los términos de esta política.
+          </p>
+
+          <h2>Recopilación de Información</h2>
+          <p>
+            Podemos recopilar información personal de los usuarios de diversas formas, incluyendo, entre otros, cuando los usuarios visitan nuestro sitio, se registran en el mismo, realizan una suscripción a nuestro boletín o interactúan con otros servicios, actividades o recursos que ponemos a disposición en nuestro sitio.
+          </p>
+          <p>
+            La información recopilada puede incluir su nombre, dirección de correo electrónico, número de teléfono, y otros detalles relevantes que nos ayuden a mejorar la experiencia del usuario y ofrecer servicios personalizados.
+          </p>
+
+          <h2>Uso de la Información Recopilada</h2>
+          <p>
+            Utilizamos la información personal que recopilamos para los siguientes fines:
+          </p>
+          <ul>
+            <li>Mejorar la atención al cliente y proporcionar respuestas más eficientes a las consultas o solicitudes de soporte.</li>
+            <li>Personalizar la experiencia del usuario en nuestro sitio, ofreciendo contenido relevante y acorde a sus intereses.</li>
+            <li>Enviar boletines informativos, actualizaciones, y otros materiales de comunicación que puedan ser de interés, siempre que el usuario haya otorgado su consentimiento.</li>
+          </ul>
+
+          <h2>Protección de la Información</h2>
+          <p>
+            Nos comprometemos a proteger la información personal de nuestros usuarios mediante medidas de seguridad adecuadas. Empleamos prácticas de recopilación, almacenamiento y procesamiento de datos seguras para evitar el acceso no autorizado, alteración, divulgación o destrucción de su información personal.
+          </p>
+
+          <h2>Compartir Información con Terceros</h2>
+          <p>
+            En **Life & Sustainability Today**, no compartimos información personal de nuestros usuarios con terceros sin su consentimiento previo, salvo en los siguientes casos:
+          </p>
+          <ul>
+            <li>Para cumplir con obligaciones legales.</li>
+            <li>Para proteger los derechos, propiedad o seguridad de nuestra organización, empleados o usuarios.</li>
+          </ul>
+
+          <h2>Uso de Cookies</h2>
+          <p>
+            Nuestro sitio utiliza cookies para mejorar la experiencia del usuario. Las cookies son pequeños archivos de texto que se almacenan en su navegador y nos permiten rastrear ciertos comportamientos y preferencias mientras navega por nuestro sitio.
+          </p>
+          <p>
+            Los usuarios pueden optar por configurar su navegador para rechazar las cookies, aunque esto podría limitar algunas funciones del sitio web.
+          </p>
+
+          <h2>Consentimiento</h2>
+          <p>
+            Al utilizar nuestro sitio web, usted acepta esta política de privacidad y los términos aquí expuestos. Nos reservamos el derecho de actualizar o modificar esta política en cualquier momento, por lo que recomendamos revisarla periódicamente.
+          </p>
+
+          <h2>Contacto</h2>
+          <p>
+            Si tiene alguna pregunta o inquietud sobre nuestra Política de Privacidad, puede contactarnos a través de la seccion del footer donde dice correo electrónico</a>.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-sections">
+          <div class="footer-column">
+            <h3>Historial</h3>
+            <ul>
+              <li><a href="#">Historial de búsquedas</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Sobre Nosotros</h3>
+            <ul>
+              <li><a href="{% url 'sobreNosotros' %}">¿Quiénes Somos?</a></li>
+              <li><a href="{% url 'politicas' %}">Política de Privacidad</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contacto</h3>
+            <ul>
+              <li><a href="mailto:migu.nieto@duocuc.cl">Correo Electrónico</a></li>
+              <li><a href="tel:+56983044190">Teléfono</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Política</h3>
+            <ul>
+              <li><a href="#privacidad">Política de Privacidad</a></li>
+              <li><a href="#terminos">Términos y Condiciones</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Suscripción</h3>
+            <form>
+              {% csrf_token %}
+              <label for="email">Suscríbete a nuestro boletín:</label>
+              <input type="email" id="email" placeholder="Ingresa tu email" />
+              <button type="submit">Suscribirse</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

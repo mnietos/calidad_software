@@ -1,0 +1,155 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    text-decoration: underline;
+}
+
+#logo{
+    height: 85px;
+}
+
+#body {
+    margin: 0;
+    padding: 0;
+    background-color:#222222;
+    height: 100vh;
+}
+
+.formulario {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+}
+
+.formulario h1 {
+    margin-top: 20px;
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+
+.formulario form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .username,
+form .email,
+form .contraseña,
+form .confirm-contraseña {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+input span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #f2a365;
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label,
+input:valid ~ label {
+    top: -10px;
+    color: #f2a365;
+}
+
+input:focus  ~ span::before,
+input:not(:placeholder-shown) ~ span::before,
+input:valid  ~ span::before {
+    top: -10px;
+    width: 100%;
+}
+
+
+.icon {
+    position: absolute;
+    height: 60%;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.icon:hover {
+    opacity: 0.8;
+}
+
+.btn-primary {
+    margin: 30px auto;
+    background-color: #f2a365 !important;
+    border-color: #f2a365 !important;
+    display: flex !important;
+}
+
+button:hover {
+    background-color: #6fc5ff;
+    box-shadow: 0 0 20px #6fc5ff50;
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: #3d94cf;
+    transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.98);
+}
+
+.login {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+
+.login a {
+    color: black;
+    text-decoration: none;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+ 
+.rol { 
+    margin-bottom: 30px;
+    margin-left: 0px;
+
+}
+h6 {
+    margin-bottom: 10px; /* Espaciado inferior del encabezado */
+    font-size: 16px; /* Tamaño de fuente para el encabezado */
+}

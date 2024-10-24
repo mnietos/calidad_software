@@ -1,0 +1,253 @@
+.contenido-comparador {
+    max-width: 90%;
+    margin: 5% auto;
+    padding: 4%;
+    background-color: #f8f8f8;
+    border-radius: 2%;
+    box-shadow: 0 4% 8% rgba(0, 0, 0, 0.1);
+}
+
+.contenido-comparador h2, .contenido-comparador h3 {
+    text-align: center;
+    color: #333;
+}
+
+.comparador-columnas {
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+    margin-top: 4%;
+}
+
+.columna-producto {
+    flex: 1;
+    padding: 2%;
+    background-color: #f0f0f0;
+    border-radius: 2%;
+}
+
+.columna-producto h3 {
+    text-align: center;
+    color: #555;
+}
+
+.columna-producto form {
+    display: flex;
+    flex-direction: column;
+}
+
+.columna-producto label {
+    margin-top: 2%;
+    margin-bottom: 1%;
+    font-weight: bold;
+    color: #555;
+}
+
+.columna-producto input, .columna-producto select {
+    padding: 2.5%;
+    border: 0.2% solid #ccc;
+    border-radius: 2%;
+    font-size: 1.5vw;
+    margin-bottom: 3%;
+    transition: border-color 0.3s ease;
+}
+
+.columna-producto input:focus, .columna-producto select:focus {
+    border-color: #f2a365;
+    outline: none;
+}
+
+.contenido-comparador button {
+    margin-top: 4%;
+    padding: 3%;
+    width: 100%;
+    background-color: #f2a365;
+    border: none;
+    border-radius: 2%;
+    color: white;
+    font-size: 1.5vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contenido-comparador button:hover {
+    background-color: #f08c3a;
+}
+
+.contenido-comparador .resultados {
+    margin-top: 5%;
+    background-color: #f0f0f0;
+    padding: 4%;
+    border-radius: 2%;
+}
+
+.contenido-comparador table {
+    width: 100%;
+    margin-bottom: 4%;
+    border-collapse: collapse;
+}
+
+.contenido-comparador table, .contenido-comparador th, .contenido-comparador td {
+    border: 0.2% solid #ccc;
+    padding: 2%;
+    text-align: center;
+}
+
+.contenido-comparador th {
+    background-color: #f2a365;
+    color: white;
+}
+
+.contenido-comparador .premium-features {
+    margin-top: 4%;
+    padding: 2%;
+    background-color: #f9f9f9;
+    border-radius: 2%;
+    text-align: center;
+}
+
+.contenido-comparador .premium-features h3 {
+    color: #f2a365;
+    margin-bottom: 2%;
+}
+
+.contenido-comparador .premium-button {
+    padding: 1% 2%;
+    margin: 1% 1%;
+    background-color: #f2a365;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contenido-comparador .premium-button:hover {
+    background-color: #f08c3a;
+}
+
+.contenido-comparador .premium-info {
+    margin-top: 2%;
+    font-style: italic;
+    color: #666;
+    font-size: 1.1vw;
+}
+
+
+/* FOOTER Y HEADRE */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.site-header {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header .logo img {
+    width: 100px;
+    height: auto;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    margin: 0 15px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-menu ul li a:hover {
+    color: #f2a365;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #222;
+    color: #ddd;
+    padding: 20px 0;
+}
+
+.site-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-sections {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.footer-column {
+    margin: 15px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f2a365;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 5px 0;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+}
+
+.footer-column form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column form input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.footer-column form button {
+    padding: 8px 12px;
+    background-color: #f2a365;
+    border: none;
+    border-radius: 4px;
+    color: #222;
+    cursor: pointer;
+}
+
+.footer-column form button:hover {
+    background-color: #f08c3a;
+}

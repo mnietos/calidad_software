@@ -1,0 +1,103 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/info-style.css' %}" />
+    <title>Suscripciones</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="logo">
+          <a href="{% url 'index' %}"
+            ><img src="{% static 'src/ong.png' %}" alt="Logo"
+          /></a>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="{% url 'productos' %}">Productos</a></li>
+            <li><a href="{% url 'calc' %}">Calculadora</a></li>
+            <li><a href="{% url 'comparador' %}">Comparador</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'perfil' %}">Perfil</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="contenido-suscripciones">
+      <h2>Planes de Suscripción Premium</h2>
+      <div class="suscripcion-cards">
+        <div class="card">
+          <h3>Plan Básico</h3>
+          <p class="precio">$5/mes</p>
+          <ul>
+            <li>30 Tickets Mensuales</li>
+            <li>Funciones de Guardar Comparación</li>
+            <li>Ver Historial de Comparaciones</li>
+          </ul>
+          <button class="btn-pagar">Pagar con PayPal</button>
+          <button class="btn-pagar">Pagar con Stripe</button>
+        </div>
+
+        <div class="card">
+          <h3>Plan Avanzado</h3>
+          <p class="precio">$12/mes</p>
+          <ul>
+            <li>Tickets Ilimitados</li>
+            <li>Funciones de Guardar Comparación</li>
+            <li>Ver Historial de Comparaciones</li>
+            <li>Generar Gráficos para Comparaciones</li>
+          </ul>
+          <button class="btn-pagar">Pagar con PayPal</button>
+          <button class="btn-pagar">Pagar con Stripe</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-sections">
+          <div class="footer-column">
+            <h3>Historial</h3>
+            <ul>
+              <li><a href="#">Historial de busquedas</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Sobre Nosotros</h3>
+            <ul>
+              <li><a href="#quienes-somos">¿Quiénes Somos?</a></li>
+              <li><a href="#valores">Valores</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contacto</h3>
+            <ul>
+              <li>
+                <a href="mailto:migu.nieto@duocuc.cl">Correo Electrónico</a>
+              </li>
+              <li><a href="tel:+56983044190">Teléfono</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Política</h3>
+            <ul>
+              <li><a href="#privacidad">Política de Privacidad</a></li>
+              <li><a href="#terminos">Términos y Condiciones</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Suscripción</h3>
+            <form>
+              {% csrf_token %}
+              <label for="email">Suscríbete a nuestro boletín:</label>
+              <input type="email" id="email" placeholder="Ingresa tu email" />
+              <button type="submit">Suscribirse</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

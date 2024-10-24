@@ -1,0 +1,96 @@
+{% load static %}
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/valores.css' %}" />
+    <title>Valores - Life & Sustainability Today</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="logo">
+          <a href="{% url 'index' %}"><img src="{% static 'src/ong.png' %}" alt="Logo" /></a>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="{% url 'productos' %}">Productos</a></li>
+            <li><a href="{% url 'calc' %}">Calculadora</a></li>
+            <li><a href="{% url 'comparador' %}">Comparador</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'perfil' %}">Perfil</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <section id="valores">
+        <div class="container">
+          <h1>Nuestros Valores</h1>
+          <p>En Life & Sustainability Today, nuestros valores son fundamentales para guiar nuestras acciones y decisiones. Nos esforzamos por cumplir con los siguientes principios:</p>
+
+          <h2>1. Compromiso con el Medio Ambiente</h2>
+          <p>La protección del medio ambiente está en el centro de todo lo que hacemos. Buscamos reducir nuestra huella de carbono y fomentar prácticas sostenibles.</p>
+
+          <h2>2. Transparencia</h2>
+          <p>Cada acción que realizamos es transparente y abierta. Queremos que nuestros usuarios y socios confíen en nosotros y en nuestras iniciativas.</p>
+
+          <h2>3. Innovación Sostenible</h2>
+          <p>Creemos en el poder de la innovación para promover soluciones que contribuyan a un futuro más sostenible.</p>
+
+          <h2>4. Educación Ambiental</h2>
+          <p>La concienciación y educación sobre los desafíos ambientales son clave para generar cambios positivos a largo plazo.</p>
+
+          <p>Estos valores reflejan nuestra dedicación a crear un impacto duradero en el mundo, ayudando a los individuos a vivir de manera más consciente y ecológica.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-sections">
+          <div class="footer-column">
+            <h3>Historial</h3>
+            <ul>
+              <li><a href="#">Historial de búsquedas</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Sobre Nosotros</h3>
+            <ul>
+              <li><a href="{% url 'sobreNosotros' %}">¿Quiénes Somos?</a></li>
+              <li><a href="{% url 'valores' %}">Valores</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contacto</h3>
+            <ul>
+              <li><a href="mailto:migu.nieto@duocuc.cl">Correo Electrónico</a></li>
+              <li><a href="tel:+56983044190">Teléfono</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Política</h3>
+            <ul>
+              <li><a href="#privacidad">Política de Privacidad</a></li>
+              <li><a href="#terminos">Términos y Condiciones</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Suscripción</h3>
+            <form>
+              {% csrf_token %}
+              <label for="email">Suscríbete a nuestro boletín:</label>
+              <input type="email" id="email" placeholder="Ingresa tu email" />
+              <button type="submit">Suscribirse</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

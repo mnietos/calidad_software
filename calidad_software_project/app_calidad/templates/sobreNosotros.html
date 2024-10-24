@@ -1,0 +1,104 @@
+{% load static %}
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/sobreNosotros.css' %}" />
+    <title>¿Quiénes Somos? - Life & Sustainability Today</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="logo">
+          <a href="{% url 'index' %}"><img src="{% static 'src/ong.png' %}" alt="Logo" /></a>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="{% url 'productos' %}">Productos</a></li>
+            <li><a href="{% url 'calc' %}">Calculadora</a></li>
+            <li><a href="{% url 'comparador' %}">Comparador</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'perfil' %}">Perfil</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <section id="quienes-somos">
+        <div class="container">
+          <h1>¿Quiénes Somos?</h1>
+          <p>
+            En Life & Sustainability Today, somos una organización sin fines de lucro dedicada a la protección del medio ambiente y la promoción de estilos de vida sostenibles. Fundada con la misión de reducir la huella de carbono a nivel global, nuestra ONG ha trabajado durante años en múltiples proyectos para generar conciencia sobre la importancia del consumo responsable, la conservación de los recursos naturales y la adopción de tecnologías más sostenibles.
+          </p>
+
+          <p>
+            Nos especializamos en desarrollar herramientas y recursos que permitan a los ciudadanos tomar decisiones más informadas sobre sus hábitos de consumo y el impacto que estos generan en el planeta. Uno de nuestros proyectos más innovadores es la creación de una calculadora de huella de carbono, que permite a los usuarios evaluar el impacto ambiental de productos tecnológicos como celulares, tablets, y computadoras. Este módulo forma parte de nuestro esfuerzo por empoderar a los consumidores con datos precisos para reducir el desperdicio y optar por productos fabricados de manera sostenible.
+          </p>
+
+          <p>
+            Además de trabajar directamente con el público, colaboramos con empresas y gobiernos en la creación de políticas y estrategias que favorezcan el desarrollo de economías verdes. Creemos firmemente que el cambio hacia un futuro más sostenible comienza con la educación y la sensibilización. Por eso, una parte fundamental de nuestro trabajo se centra en campañas educativas y en ofrecer charlas y talleres sobre temas ambientales, energías renovables, reciclaje, y responsabilidad social.
+          </p>
+
+          <p>
+            Nuestra organización está compuesta por un equipo multidisciplinario de expertos en ciencias ambientales, tecnología, educación, y comunicación. Cada miembro de nuestro equipo comparte el mismo compromiso: promover un mundo donde la sustentabilidad no sea solo una opción, sino una norma. Juntos, trabajamos para que nuestras generaciones futuras puedan disfrutar de un planeta más sano y equilibrado.
+          </p>
+
+          <p>
+            Nuestra sede principal está ubicada en Santiago, Chile, pero nuestro trabajo trasciende fronteras. Con proyectos activos en América Latina, Europa, y Asia, hemos logrado establecer una red internacional de colaboradores y voluntarios que nos ayudan a llevar adelante nuestra misión. Queremos ser una plataforma para el cambio, ofreciendo a las personas y organizaciones las herramientas que necesitan para adoptar hábitos más sostenibles y responsables con el medio ambiente.
+          </p>
+
+          <p>
+            En Life & Sustainability Today creemos que el cambio es posible si actuamos juntos. Invitamos a todos a unirse a nosotros en esta misión, porque solo a través de un esfuerzo colectivo podremos construir un futuro más sostenible y justo para todos los seres vivos del planeta.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-sections">
+          <div class="footer-column">
+            <h3>Historial</h3>
+            <ul>
+              <li><a href="#">Historial de búsquedas</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Sobre Nosotros</h3>
+            <ul>
+              <li><a href="{% url 'sobreNosotros' %}">¿Quienes Somos?</a></li>
+              <li><a href="{% url 'valores' %}">Valores</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contacto</h3>
+            <ul>
+              <li><a href="mailto:migu.nieto@duocuc.cl">Correo Electrónico</a></li>
+              <li><a href="tel:+56983044190">Teléfono</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Política</h3>
+            <ul>
+              <li><a href="#privacidad">Política de Privacidad</a></li>
+              <li><a href="#terminos">Términos y Condiciones</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Suscripción</h3>
+            <form>
+              {% csrf_token %}
+              <label for="email">Suscríbete a nuestro boletín:</label>
+              <input type="email" id="email" placeholder="Ingresa tu email" />
+              <button type="submit">Suscribirse</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

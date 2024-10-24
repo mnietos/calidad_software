@@ -1,0 +1,179 @@
+{% load static %}
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="{% static '/js/script.js' %}"></script>  
+    <link rel="stylesheet" href="{% static '/css/index.css' %}" />
+    <title>Life &amp; Sustainability Today</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="logo">
+          <a href="{% url 'index' %}">
+            <img src="{% static 'src/ong.png' %}" alt="Logo" />
+          </a>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="{% url 'productos' %}">Productos</a></li>
+            <li><a href="{% url 'calc' %}">Calculadora</a></li>
+            <li><a href="{% url 'comparador' %}">Comparador</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'perfil' %}">Perfil</a></li>
+          </ul>
+
+        <!-- Botón de menú hamburguesa -->
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </header>
+    <!-- body -->
+    <div class="heroImagen">
+      <div class="heroTexto">
+        <h1>ONG</h1>
+        <p>Life &amp; Sustainability Today</p>
+      </div>
+    </div>
+    <div id="cuerpoPagina">
+      <section id="seccionMisionVision">
+        <div class="cardMision">
+          <h1>Misión</h1>
+          <p>
+            Nuestra misión es inspirar y educar a las personas, empresas y
+            comunidades a tomar decisiones responsables que promuevan la
+            sostenibilidad y la preservación del medio ambiente,
+          </p>
+          <p>
+            contribuyendo activamente a la reducción de la huella de carbono a
+            nivel global. A través de la implementación de proyectos ecológicos
+            y la promoción de prácticas sostenibles,
+          </p>
+          <p>
+            buscamos generar un cambio positivo y duradero en nuestra sociedad
+            para el bienestar de las futuras generaciones.
+          </p>
+        </div>
+        <div class="cardVision">
+          <h1>Visión</h1>
+          <p>
+            Aspiramos a ser una organización líder en la promoción de un estilo
+            de vida sostenible, contribuyendo a la reducción significativa de la
+            huella de carbono global y a la preservación del medio ambiente.
+          </p>
+          <p>
+            Visualizamos un mundo donde el consumo consciente y la innovación
+            ecológica sean la norma, donde personas y empresas colaboren para
+            proteger nuestro planeta y asegurar un futuro más limpio, saludable
+            y justo para todos.
+          </p>
+        </div>
+      </section>
+      <section id="seccionProyectos">
+        <h1 id="tituloProyectos">Proyectos actuales</h1>
+      </section>
+      <section class="projectoContainer">
+        <div class="projectoCard">
+          <div class="projectoLogo"><i class="fas fa-calculator"></i></div>
+          <h2>Calculadora de Huella de Carbono</h2>
+          <p>
+            Herramienta interactiva que permite calcular y comparar la huella de
+            carbono de productos tecnológicos.
+          </p>
+        </div>
+        <div class="projectoCard">
+          <div class="projectoLogo"><i class="fas fa-school"></i></div>
+          <h2>Programa de Educación Ambiental</h2>
+          <p>
+            Talleres y actividades para enseñar prácticas ecológicas en
+            comunidades locales y escuelas.
+          </p>
+        </div>
+        <div class="projectoCard">
+          <div class="projectoLogo"><i class="fas fa-recycle"></i></div>
+          <h2>Reducción de Residuos Electrónicos</h2>
+          <p>
+            Campaña de reciclaje en instituciones educativas para reducir los
+            desechos tecnológicos y fomentar la reutilización.
+          </p>
+        </div>
+        <div class="projectoCard">
+          <div class="projectoLogo"><i class="fas fa-industry"></i></div>
+          <h2>Evaluación de Proveedores Sostenibles</h2>
+          <p>
+            Plataforma para evaluar proveedores según sus prácticas sostenibles
+            y promover el consumo responsable.
+          </p>
+        </div>
+        <div class="projectoCard">
+          <div class="projectoLogo"><i class="fas fa-handshake"></i></div>
+          <h2>Empresas Comprometidas</h2>
+          <p>
+            Alianzas con empresas para implementar políticas sostenibles y
+            reducir la huella de carbono corporativa.
+          </p>
+        </div>
+        <div class="projectoCard">
+          <div class="projectoLogo"><i class="fas fa-globe"></i></div>
+          <h2>Proyecto Verde Digital</h2>
+          <p>
+            Campaña para digitalizar procesos y reducir el uso de papel en las
+            actividades de la ONG.
+          </p>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="container">
+          <div class="footer-sections">
+            <div class="footer-column">
+              <h3>Historial</h3>
+              <ul>
+                <li><a href="#">Historial de busquedas</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Sobre Nosotros</h3>
+              <ul>
+                <li><a href="{% url 'sobreNosotros' %}">¿Quiénes Somos?</a></li>
+                <li><a href="{% url 'valores' %}">Valores</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Contacto</h3>
+              <ul>
+                <li>
+                  <a href="mailto:migu.nieto@duocuc.cl">Correo Electrónico</a>
+                </li>
+                <li><a href="tel:+56983044190">Teléfono</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Política</h3>
+              <ul>
+                <li><a href="{% url 'politicas' %}">Política de Privacidad</a></li>
+                <li><a href="{% url 'terminos' %}">Términos y Condiciones</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Suscripción</h3>
+              <form>
+                {% csrf_token %}
+                <label for="email">Suscríbete a nuestro boletín:</label>
+                <input type="email" id="email" placeholder="Ingresa tu email" />
+                <button type="submit">Suscribirse</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
